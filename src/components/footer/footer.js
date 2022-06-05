@@ -8,11 +8,10 @@ const Footer = () => {
 
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
       <Container >
-          <CopyrightIcon alignItems="center" />
+          <CopyrightIcon />
           <Typography
-            alignItems="center"
             variant="h6"
             noWrap
             component="a"
