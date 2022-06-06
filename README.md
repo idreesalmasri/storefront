@@ -11,7 +11,7 @@
 
 ### phase-2 
 ### ![uml](./uml2.PNG)
-### [PR phase-2](![uml](https://github.com/idreesalmasri/storefront/pull/4)
+### [PR phase-2](https://github.com/idreesalmasri/storefront/pull/4)
 - As a user, I want to choose from products in the list and add them to my shopping cart
 - As a user, I want to see the products that I’ve added to my shopping cart so that
 - As a user, I want to change the quantity of items I intend to purchase in my shopping cart
