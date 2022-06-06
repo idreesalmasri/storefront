@@ -5,20 +5,29 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useSelector } from "react-redux";
-export default function MediaCard() {
-    
+import { useSelector ,useDispatch} from "react-redux";
+import Swal from 'sweetalert2'
 
+export default function MediaCard() {
+    function addClick(ele){
+      if(ele.quantity===0){
+        Swal.fire('out of stuck, please choose another item')
+        return;
+      }
+        dispatch({type:"addToCart",payload:ele})
+        dispatch({type:"decreaseQuantity",payload:ele})
+    }
+  const dispatch = useDispatch();
   const state4 = useSelector((state) => state.reducerProducts);
   return (
     <div style={{display:"flex", justifyContent: "space-round",width: "40px",}}>
-      {state4.selectedPrpducts.map((ele) => {
+      {state4.selectedProducts.map((ele) => {
         return (
           <div key={ele.id} >
-            <Card sx={{ maxWidth: 345 ,width: 300 ,margin:2}}>
+            <Card sx={{ maxWidth: 345 ,width: 300 ,margin:2, marginBottom:5}}>
               <CardMedia
                 component="img"
-                height="140"
+                height="110"
                 image={ele.image}
                 alt={ele.image}
               />
@@ -37,8 +46,8 @@ export default function MediaCard() {
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">Add</Button>
-                <Button size="small">Learn More</Button>
+                <Button size="small" onClick={()=>addClick(ele)}>Add to cart</Button>
+                <Button size="small" >Learn More</Button>
               </CardActions>
             </Card>
             
