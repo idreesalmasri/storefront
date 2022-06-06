@@ -5,9 +5,11 @@ import Typography from '@mui/material/Typography';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Container from '@mui/material/Container';
 
+
 const Header = () => {
 
   return (
+    <>
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -27,10 +29,11 @@ const Header = () => {
             Virtual Store
           </Typography>
 
-         
         </Toolbar>
       </Container>
     </AppBar>
+         
+         </>
   );
 };
 export default Header;

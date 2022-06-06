@@ -29,7 +29,7 @@ function Catrgories() {
                 <AttachFileIcon />
               </ListItemIcon>
               <div style={{display:'flex',flexDirection:"column",margin:2}}>
-              <ListItemText primary={`${ele.normalizedName}`} /><br/><hr></hr>
+              <ListItemText primary={`${ele.normalizedName}`} />
               <ListItemText primary={`${ele.description}`} />
               </div>
             </ListItemButton>)
@@ -43,9 +43,6 @@ function Catrgories() {
   );
   
 }
-const mapStateToProps = state => ({
-  CategoriesReducer: state.CategoriesReducer,
-  reducerProducts:state.reducerProducts
-});
+
 export default Catrgories;
 
