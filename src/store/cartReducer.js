@@ -8,8 +8,10 @@ count:0
 export default function cartReducer(state=initialState,action){
     let { type,payload } = action;
     // console.log(state); 
+    let index=0;
     switch(type){
         case "addToCart":
+
             let itemNum=state.count+1;
             // console.log(state.productInCART);
             let newCart=[...state.productInCART]
@@ -21,8 +23,14 @@ export default function cartReducer(state=initialState,action){
             }
         case "removeFromCart" :
             let c2=state.count-1;
+             
             let cart=[...state.productInCART]
-            cart.splice(payload-1,1)
+            for(let i=0;i<cart.length;i++){
+                if(cart[i].itemNum===payload){
+                     index=i;
+                }
+            }
+            cart.splice(index,1)
             return {
                 productInCART:cart,
                 count:c2
