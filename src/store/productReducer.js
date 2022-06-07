@@ -55,7 +55,7 @@ export const initialState = {
               selectedProducts: selectedProduct,
             };
             case "decreaseQuantity":
-              let decrease=[...state.selectedProducts]
+              let decrease=[...state.products]
               
               let itemincart = decrease.map(
                 (product) =>{if (product.name === payload.name){
@@ -68,10 +68,10 @@ export const initialState = {
               );
               return {
                 ...state,
-                selectedProducts:itemincart
+                products:itemincart
               };
               case "increaseQuantity":
-              let increase=[...state.selectedProducts]
+              let increase=[...state.products]
               
               let itemsincart = increase.map(
                 (product) =>{if (product.name === payload){
@@ -84,7 +84,7 @@ export const initialState = {
               );
               return {
                 ...state,
-                selectedProducts:itemsincart
+                products:itemsincart
               }
           default:
             return state;
