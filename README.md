@@ -10,7 +10,7 @@
 
 
 ### phase-2 
-# [Netlify Link phase-2](https://deploy-preview-5--gilded-paprenjak-be53ab.netlify.app/)
+# [Netlify Link phase-2](https://gilded-paprenjak-be53ab.netlify.app/)
 ### ![uml](./uml2.PNG)
 ### [PR phase-2](https://github.com/idreesalmasri/storefront/pull/4)
 - As a user, I want to choose from products in the list and add them to my shopping cart
